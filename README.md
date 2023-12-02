@@ -95,7 +95,7 @@ Project structure is described below:
   - Đánh giá Coupling cho các lớp trong controller
 
 - Implementation details:
-  - Pull Request(s): 
+  - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/1
   - Specific implementation details:
     - Phân loại từng hàm trong controller và đánh giá coupling cho chúng
 
