@@ -31,6 +31,7 @@ public class PlaceOrderController extends BaseController{
      * This method checks the avalibility of product when user click PlaceOrder button
      * @throws SQLException
      */
+    // Common coupling
     public void placeOrder() throws SQLException{
         Cart.getCart().checkAvailabilityOfProduct();
     }
@@ -40,6 +41,7 @@ public class PlaceOrderController extends BaseController{
      * @return Order
      * @throws SQLException
      */
+    // Common coupling
     public Order createOrder() throws SQLException{
         Order order = new Order();
         for (Object object : Cart.getCart().getListMedia()) {
@@ -57,6 +59,7 @@ public class PlaceOrderController extends BaseController{
      * @param order
      * @return Invoice
      */
+    // Data coupling
     public Invoice createInvoice(Order order) {
         return new Invoice(order);
     }
@@ -67,6 +70,7 @@ public class PlaceOrderController extends BaseController{
      * @throws InterruptedException
      * @throws IOException
      */
+    // Data coupling
     public void processDeliveryInfo(HashMap info) throws InterruptedException, IOException{
         LOGGER.info("Process Delivery Info");
         LOGGER.info(info.toString());
@@ -79,20 +83,24 @@ public class PlaceOrderController extends BaseController{
    * @throws InterruptedException
    * @throws IOException
    */
+    // Data coupling
     public void validateDeliveryInfo(HashMap<String, String> info) throws InterruptedException, IOException{
     	
     }
     
+    // Data coupling
     public boolean validatePhoneNumber(String phoneNumber) {
     	// TODO: your work
     	return false;
     }
     
+    // Data coupling
     public boolean validateName(String name) {
     	// TODO: your work
     	return false;
     }
     
+    // Data coupling
     public boolean validateAddress(String address) {
     	// TODO: your work
     	return false;
@@ -104,6 +112,7 @@ public class PlaceOrderController extends BaseController{
      * @param order
      * @return shippingFee
      */
+    // Stamp coupling
     public int calculateShippingFee(Order order){
         Random rand = new Random();
         int fees = (int)( ( (rand.nextFloat()*10)/100 ) * order.getAmount() );

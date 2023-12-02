@@ -16,8 +16,8 @@ Group information is described in the table below:
 
 | Name             | Student Id  | Role        |
 | :--------------- | :---------- | :---------- |
-| Chu Văn HIếu     | 20194046    | Team Leader |
-| Nguyễn Văn Hiển  | 20204549    | Member      |
+| Chu Văn Hiếu     | 20194046    | Team Leader |
+| Nguyễn Văn Hiển  | 20204548    | Member      |
 | Nguyễn Đức Hiệp  | 20200213    | Member      |
 | Doãn Văn Hiếu    | 20204549    | Member      |
 
@@ -92,15 +92,12 @@ Project structure is described below:
 <br>
 
 - Assigned tasks:
-  - Task 1
-  - Task 2
-  - ...
+  - Đánh giá Coupling cho các lớp trong controller
 
 - Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): 
   - Specific implementation details:
-    - Describe specific in detail what you did last week
-    - You can attach images if you want
+    - Phân loại từng hàm trong controller và đánh giá coupling cho chúng
 
 </details>
 
