@@ -8,6 +8,7 @@ public class OrderMedia {
     private int price;
     private int quantity;
 
+    ////Data coupling
     public OrderMedia(Media media, int quantity, int price) {
         this.media = media;
         this.quantity = quantity;
@@ -22,7 +23,7 @@ public class OrderMedia {
             ", price='" + price + "'" +
             "}";
     }
-    
+
     public Media getMedia() {
         return this.media;
     }

@@ -102,6 +102,7 @@ public class DVD extends Media {
     }
 
     @Override
+    //Common Coupling
     public Media getMediaById(int id) throws SQLException {
         String sql = "SELECT * FROM "+
                      "aims.DVD " +
