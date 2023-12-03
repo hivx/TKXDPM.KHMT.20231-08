@@ -40,14 +40,13 @@ Project structure is described below:
 <summary>Chu Văn Hiếu</summary>
 <br>
 
-Assigned tasks:
+- Assigned tasks:
+  - Đánh giá Coupling cho các lớp trong folder subsystem
 
-Đánh giá Coupling cho các lớp trong folder subsystem
-Implementation details:
-
-Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/4
-Specific implementation details:
-Đánh giá Coupling cho các hàm và lớp trong subsystem
+- Implementation details:
+  - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/4
+  - Specific implementation details:
+    - Đánh giá Coupling cho các hàm và lớp trong subsystem
 
 </details>
 
