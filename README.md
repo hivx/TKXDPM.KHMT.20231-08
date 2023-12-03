@@ -61,7 +61,7 @@ Project structure is described below:
   - Đánh giá Coupling cho các lớp trong folder utils
 
 - Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): [https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/3]()
   - Specific implementation details:
     - Phân loại từng hàm trong folder utils và đánh giá coupling cho chúng
 
