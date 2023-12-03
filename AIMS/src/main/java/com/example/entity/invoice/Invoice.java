@@ -11,10 +11,12 @@ public class Invoice {
 
     }
 
+    //Data coupling
     public Invoice(Order order){
         this.order = order;
     }
 
+    //Data coupling
     public Order getOrder() {
         return order;
     }

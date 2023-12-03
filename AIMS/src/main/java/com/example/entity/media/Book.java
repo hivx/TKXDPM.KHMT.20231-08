@@ -104,6 +104,7 @@ public class Book extends Media {
     }
 
     @Override
+    //Common coupling
     public Media getMediaById(int id) throws SQLException {
         String sql = "SELECT * FROM "+
                      "aims.Book " +

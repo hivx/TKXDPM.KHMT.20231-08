@@ -18,8 +18,9 @@ public class HomeController extends BaseController{
      * @return List[Media]
      * @throws SQLException
      */
-    public List getAllMedia() throws SQLException{
-        return new Media().getAllMedia();
+    // Common coupling
+    public List getListCartMedia(){
+        return Cart.getCart().getListMedia();
     }
 
 }
