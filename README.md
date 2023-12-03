@@ -40,16 +40,14 @@ Project structure is described below:
 <summary>Chu Văn Hiếu</summary>
 <br>
 
-- Assigned tasks:
-  - Task 1
-  - Task 2
-  - ...
+Assigned tasks:
 
-- Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
-  - Specific implementation details:
-    - Describe specific in detail what you did last week
-    - You can attach images if you want
+Đánh giá Coupling cho các lớp trong folder subsystem
+Implementation details:
+
+Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/4
+Specific implementation details:
+Đánh giá Coupling cho các hàm và lớp trong subsystem
 
 </details>
 
