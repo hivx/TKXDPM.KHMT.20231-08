@@ -58,15 +58,12 @@ Project structure is described below:
 <br>
 
 - Assigned tasks:
-  - Task 1
-  - Task 2
-  - ...
+  - Đánh giá Coupling cho các lớp trong folder utils
 
 - Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): [#3](https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/3)
   - Specific implementation details:
-    - Describe specific in detail what you did last week
-    - You can attach images if you want
+    - Phân loại từng hàm trong folder utils và đánh giá coupling cho chúng
 
 </details>
 

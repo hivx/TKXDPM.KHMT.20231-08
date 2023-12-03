@@ -25,6 +25,7 @@ public class API {
 	public static DateFormat DATE_FORMATER = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 	private static Logger LOGGER = Utils.getLogger(Utils.class.getName());
 
+	//Content Coupling và Control Coupling
 	public static String get(String url, String token) throws Exception {
 		LOGGER.info("Request URL: " + url + "\n");
 		URL line_api_url = new URL(url);
@@ -47,6 +48,7 @@ public class API {
 
 	int var;
 
+	//Content Coupling và Control Coupling
 	public static String post(String url, String data
 //			, String token
 	) throws IOException {
@@ -78,6 +80,7 @@ public class API {
 		return response.toString();
 	}
 
+	//Uncoupled
 	private static void allowMethods(String... methods) {
 		try {
 			Field methodsField = HttpURLConnection.class.getDeclaredField("methods");
