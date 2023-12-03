@@ -12,6 +12,7 @@ import com.example.entity.payment.PaymentTransaction;
  * @author hieud
  * 
  */
+//uncoupled
 public interface InterbankInterface {
 
 	/**

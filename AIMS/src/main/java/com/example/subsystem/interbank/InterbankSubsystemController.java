@@ -17,22 +17,22 @@ import com.example.utils.MyMap;
 import com.example.utils.Utils;
 
 public class InterbankSubsystemController {
-
+	
 	private static final String PUBLIC_KEY = "AQzdE8O/fR8=";
 	private static final String SECRET_KEY = "BUXj/7/gHHI=";
 	private static final String PAY_COMMAND = "pay";
 	private static final String VERSION = "1.0.0";
-
+	
 	private static InterbankBoundary interbankBoundary = new InterbankBoundary();
-
+	//data coupling
 	public PaymentTransaction refund(CreditCard card, int amount, String contents) {
 		return null;
 	}
-	
+	//data coupling
 	private String generateData(Map<String, Object> data) {
 		return ((MyMap) data).toJSON();
 	}
-
+	//data coupling
 	public PaymentTransaction payOrder(CreditCard card, int amount, String contents) {
 		Map<String, Object> transaction = new MyMap();
 
@@ -62,7 +62,7 @@ public class InterbankSubsystemController {
 
 		return makePaymentTransaction(response);
 	}
-
+	//common and control coupling
 	private PaymentTransaction makePaymentTransaction(MyMap response) {
 		if (response == null)
 			return null;
@@ -72,11 +72,11 @@ public class InterbankSubsystemController {
 		PaymentTransaction trans = new PaymentTransaction((String) response.get("errorCode"), card,
 				(String) transcation.get("transactionId"), (String) transcation.get("transactionContent"),
 				Integer.parseInt((String) transcation.get("amount")), (String) transcation.get("createdAt"));
-
+		//control coupling
 		switch (trans.getErrorCode()) {
 		case "00":
 			break;
-		case "01":
+		case "01"://common coupling
 			throw new InvalidCardException();
 		case "02":
 			throw new NotEnoughBalanceException();
