@@ -12,6 +12,7 @@ public class CartMedia {
 
     }
 
+    //Data coupling
     public CartMedia(Media media, Cart cart, int quantity, int price) {
         this.media = media;
         this.quantity = quantity;
