@@ -3,6 +3,7 @@ package com.example.subsystem.interbank;
 import common.exception.UnrecognizedException;
 import com.example.utils.API;
 
+//control coupling
 public class InterbankBoundary {
 
 	String query(String url, String data) {
