@@ -24,6 +24,7 @@ public class MyMap extends LinkedHashMap<String, Object> {
 	 *         https://hg.openjdk.java.net/jdk8/jdk8/jdk/file/tip/src/share/classes/java/util/Hashtable.java
 	 * @return a {@link String String}.
 	 */
+	//Content Coupling
 	public String toJSON() {
 		int max = size() - 1;
 		if (max == -1)
@@ -64,6 +65,7 @@ public class MyMap extends LinkedHashMap<String, Object> {
 	 * @throws IllegalAccessException
 	 * @throws IllegalArgumentException
 	 */
+	//Content Coupling và Data Coupling
 	public static Map<String, Object> toMyMap(Object obj) throws IllegalArgumentException, IllegalAccessException {
 		Map<String, Object> map = new MyMap();
 		for (Field field : obj.getClass().getDeclaredFields()) {
@@ -95,6 +97,7 @@ public class MyMap extends LinkedHashMap<String, Object> {
 	 * @return the term as {@link String String}
 	 * @throws IllegalArgumentException
 	 */
+	//Content Coupling và Data Coupling
 	private static String getNextTerm(String str, int idx) {
 		if (str == null || idx >= str.length() || str.charAt(idx) != '"') {
 			throw new IllegalArgumentException("Cannot resolve the input.");
@@ -128,6 +131,7 @@ public class MyMap extends LinkedHashMap<String, Object> {
 	 * @return the term as {@link utils.MyMap MyMap} 
 	 * @throws IllegalArgumentException
 	 */
+	//Content Coupling và Data Coupling
 	public static MyMap toMyMap(String str, int idx) throws IllegalArgumentException {
 		if (str == null || str.length() < 2 || str.charAt(idx) != '{') {
 			throw new IllegalArgumentException("Cannot resolve the input.");
