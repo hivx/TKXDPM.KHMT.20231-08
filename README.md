@@ -78,7 +78,7 @@ Project structure is described below:
   - Đánh giá Cohesion cho các lớp trong entity
 
 - Implementation details:
-  - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/2
+  - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/8
   - Specific implementation details:
     - Đánh giá cohesion cho các lớp trong entity
 
