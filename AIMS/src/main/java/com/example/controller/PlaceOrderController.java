@@ -20,6 +20,7 @@ import com.example.views.popup.PopupScreen;
  * This class controls the flow of place order usecase in our AIMS project
  * @author nguyenlm
  */
+// Functional cohesion
 public class PlaceOrderController extends BaseController{
 
     /**
