@@ -6,6 +6,7 @@ import javafx.scene.text.FontWeight;
 /**
  * @author nguyenlm Contains the configs for AIMS Project
  */
+//Content Cohesion và Data Cohesion
 public class Configs {
 
 	// api constants

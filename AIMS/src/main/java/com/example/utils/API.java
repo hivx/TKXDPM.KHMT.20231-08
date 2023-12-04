@@ -20,6 +20,7 @@ import java.util.logging.Logger;
 import com.example.entity.payment.CreditCard;
 import com.example.entity.payment.PaymentTransaction;
 
+//Procedural Cohesion
 public class API {
 
 	public static DateFormat DATE_FORMATER = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");

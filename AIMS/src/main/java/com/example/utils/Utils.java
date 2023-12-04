@@ -13,6 +13,7 @@ import java.util.logging.Logger;
 /**
  * @author nguyenlm Contains helper functions
  */
+//Content Cohesion và Data Cohesion
 public class Utils {
 
 	//Data Coupling
