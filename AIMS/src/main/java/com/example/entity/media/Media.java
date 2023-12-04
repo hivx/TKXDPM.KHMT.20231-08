@@ -14,6 +14,7 @@ import com.example.utils.Utils;
  * The general media class, for another media it can be done by inheriting this class
  * @author nguyenlm
  */
+//Procedural cohesion
 public class Media {
 
     private static Logger LOGGER = Utils.getLogger(Media.class.getName());

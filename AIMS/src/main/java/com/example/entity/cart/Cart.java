@@ -7,8 +7,9 @@ import java.util.List;
 import com.example.common.exception.MediaNotAvailableException;
 import com.example.entity.media.Media;
 
+//Sequential Cohesion
 public class Cart {
-    
+
     private List<CartMedia> lstCartMedia;
     private static Cart cartInstance;
 

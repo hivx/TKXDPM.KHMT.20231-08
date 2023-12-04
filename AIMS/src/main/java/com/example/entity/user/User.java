@@ -4,6 +4,7 @@ import com.example.entity.cart.Cart;
 import com.example.entity.cart.CartMedia;
 import com.example.entity.media.Media;
 
+//Procedural cohesion
 public class User {
     
     private int id;

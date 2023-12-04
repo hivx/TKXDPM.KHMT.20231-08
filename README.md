@@ -34,7 +34,7 @@ Project structure is described below:
 ---
 
 <details>
-  <summary>W10: 27/11/2023 ~ 3/12/2023 </summary>
+  <summary>W11: 4/12/2023 ~ 10/12/2023 </summary>
 <br>
 <details>
 <summary>Chu Văn Hiếu</summary>
@@ -75,12 +75,12 @@ Project structure is described below:
 <br>
 
 - Assigned tasks:
-  - Đánh giá Coupling cho các lớp trong entity
+  - Đánh giá Cohesion cho các lớp trong entity
 
 - Implementation details:
   - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/2
   - Specific implementation details:
-    - Đánh giá coupling cho các hàm trong entity
+    - Đánh giá cohesion cho các lớp trong entity
 
 </details>
 
