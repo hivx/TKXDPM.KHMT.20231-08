@@ -2,6 +2,7 @@ package com.example.entity.invoice;
 
 import com.example.entity.order.Order;
 
+//Sequential Cohesion
 public class Invoice {
 
     private Order order;

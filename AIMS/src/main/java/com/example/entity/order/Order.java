@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.example.utils.Configs;
 
+// Sequential Cohesion
 public class Order {
     
     private int shippingFees;

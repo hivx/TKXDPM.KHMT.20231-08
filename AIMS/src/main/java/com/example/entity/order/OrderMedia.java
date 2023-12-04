@@ -2,6 +2,7 @@ package com.example.entity.order;
 
 import com.example.entity.media.Media;
 
+//Procedural cohesion
 public class OrderMedia {
     
     private Media media;

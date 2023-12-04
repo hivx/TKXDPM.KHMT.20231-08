@@ -8,6 +8,7 @@ import java.util.List;
 
 import com.example.entity.db.AIMSDB;
 
+// Procedural cohesion
 public class Book extends Media {
 
     String author;

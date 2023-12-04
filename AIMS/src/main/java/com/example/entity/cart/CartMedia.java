@@ -2,6 +2,7 @@ package com.example.entity.cart;
 
 import com.example.entity.media.Media;
 
+//Procedural cohesion
 public class CartMedia {
     
     private Media media;
