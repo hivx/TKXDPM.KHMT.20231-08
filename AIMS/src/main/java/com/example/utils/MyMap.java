@@ -14,6 +14,8 @@ import java.util.Map;
  * @author hieud
  *
  */
+
+//Content Cohesion và Data Cohesion
 public class MyMap extends LinkedHashMap<String, Object> {
 	private static final long serialVersionUID = 1L;
 
