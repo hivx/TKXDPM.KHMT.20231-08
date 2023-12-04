@@ -121,7 +121,7 @@ Project structure is described below:
   - Đánh giá Cohesion cho các lớp trong folder utils
 
 - Implementation details:
-  - Pull Request(s): [link pull request]()
+  - Pull Request(s): [link pull request](https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/7)
   - Specific implementation details:
     - Phân loại từng hàm trong folder utils và đánh giá cohesion cho chúng
 
