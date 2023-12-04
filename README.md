@@ -96,6 +96,69 @@ Project structure is described below:
 
 ---
 
+<details>
+  <summary>W11: 04/12/2023 ~ 10/12/2023 </summary>
+<br>
+<details>
+<summary>Chu Văn Hiếu</summary>
+<br>
+
+- Assigned tasks:
+  - Đánh giá Coupling cho các lớp trong folder subsystem
+
+- Implementation details:
+  - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/4
+  - Specific implementation details:
+    - Đánh giá Coupling cho các hàm và lớp trong subsystem
+
+</details>
+
+<details>
+<summary>Nguyễn Văn Hiển</summary>
+<br>
+
+- Assigned tasks:
+  - Đánh giá Coupling cho các lớp trong folder utils
+
+- Implementation details:
+  - Pull Request(s): [#3](https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/3)
+  - Specific implementation details:
+    - Phân loại từng hàm trong folder utils và đánh giá coupling cho chúng
+
+</details>
+
+<details>
+<summary>Nguyễn Đức Hiệp</summary>
+<br>
+
+- Assigned tasks:
+  - Đánh giá Coupling cho các lớp trong entity
+
+- Implementation details:
+  - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/2
+  - Specific implementation details:
+    - Đánh giá coupling cho các hàm trong entity
+
+</details>
+
+<details>
+<summary>Doãn Văn Hiếu</summary>
+<br>
+
+- Assigned tasks:
+  - Đánh giá Cohesion cho các lớp trong controller
+
+- Implementation details:
+  - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/6
+  - Specific implementation details:
+    - Phân loại từng hàm trong controller và đánh giá cohesion cho chúng
+
+</details>
+
+</details>
+
+---
+
 ## QA
 
 If you have questions, please contact Group 8 to be answered.

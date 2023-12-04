@@ -11,6 +11,7 @@ import com.example.entity.cart.CartMedia;
  * This class controls the flow of events when users view the Cart
  * @author nguyenlm
  */
+// Functional cohesion
 public class ViewCartController extends BaseController{
     
     /**

@@ -19,6 +19,7 @@ public class HomeController extends BaseController{
      * @throws SQLException
      */
     // Common coupling
+    // Functional cohesion
     public List getListCartMedia(){
         return Cart.getCart().getListMedia();
     }
