@@ -14,6 +14,7 @@ import com.example.subsystem.interbank.InterbankSubsystemController;
  * @author hieud
  *
  */
+//Communicational Cohesion
 public class InterbankSubsystem implements InterbankInterface {
 
 	/**

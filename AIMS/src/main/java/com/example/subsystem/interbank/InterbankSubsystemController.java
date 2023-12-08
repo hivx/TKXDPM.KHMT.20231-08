@@ -16,6 +16,7 @@ import com.example.utils.Configs;
 import com.example.utils.MyMap;
 import com.example.utils.Utils;
 
+//Functional Cohesion
 public class InterbankSubsystemController {
 	
 	private static final String PUBLIC_KEY = "AQzdE8O/fR8=";

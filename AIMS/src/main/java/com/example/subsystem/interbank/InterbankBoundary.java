@@ -3,6 +3,7 @@ package com.example.subsystem.interbank;
 import common.exception.UnrecognizedException;
 import com.example.utils.API;
 
+//Coincidental
 //uncoupled coupling
 public class InterbankBoundary {
 
