@@ -69,12 +69,12 @@ Project structure is described below:
 <br>
 
 - Assigned tasks:
-  - Đánh giá Cohesion cho các lớp trong entity
+  - Đánh giá Coupling cho các lớp trong entity
 
 - Implementation details:
   - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/2
   - Specific implementation details:
-    - Đánh giá cohesion cho các lớp trong entity
+    - Đánh giá coupling cho các hàm trong entity
 
 </details>
 
@@ -104,12 +104,12 @@ Project structure is described below:
 <br>
 
 - Assigned tasks:
-  - Đánh giá Coupling cho các lớp trong folder subsystem
+  - Đánh giá Cohesion cho các lớp trong folder subsystem
 
 - Implementation details:
-  - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/4
+  - Pull Request(s): [Link](https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/9)
   - Specific implementation details:
-    - Đánh giá Coupling cho các hàm và lớp trong subsystem
+    - Phân loại từng hàm và đánh giá cohesion trong subsystem
 
 </details>
 
@@ -132,12 +132,12 @@ Project structure is described below:
 <br>
 
 - Assigned tasks:
-  - Đánh giá Coupling cho các lớp trong entity
+  - Đánh giá Cohesion cho các lớp trong entity
 
 - Implementation details:
   - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/8
   - Specific implementation details:
-    - Đánh giá coupling cho các hàm trong entity
+    - Phân loại từng hàm và đánh giá cohesion trong entity
 
 </details>
 
