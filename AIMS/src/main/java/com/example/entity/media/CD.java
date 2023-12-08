@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 
+// Procedural cohesion
 public class CD extends Media {
 
     String artist;
@@ -69,6 +70,7 @@ public class CD extends Media {
     }
 
     @Override
+    //Common Coupling
     public Media getMediaById(int id) throws SQLException {
         String sql = "SELECT * FROM "+
                      "aims.CD " +

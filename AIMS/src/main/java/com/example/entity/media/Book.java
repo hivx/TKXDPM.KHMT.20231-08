@@ -8,6 +8,7 @@ import java.util.List;
 
 import com.example.entity.db.AIMSDB;
 
+// Procedural cohesion
 public class Book extends Media {
 
     String author;
@@ -104,6 +105,7 @@ public class Book extends Media {
     }
 
     @Override
+    //Common coupling
     public Media getMediaById(int id) throws SQLException {
         String sql = "SELECT * FROM "+
                      "aims.Book " +

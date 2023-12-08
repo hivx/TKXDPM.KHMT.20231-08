@@ -2,6 +2,7 @@ package com.example.entity.cart;
 
 import com.example.entity.media.Media;
 
+//Procedural cohesion
 public class CartMedia {
     
     private Media media;
@@ -12,6 +13,7 @@ public class CartMedia {
 
     }
 
+    //Data coupling
     public CartMedia(Media media, Cart cart, int quantity, int price) {
         this.media = media;
         this.quantity = quantity;

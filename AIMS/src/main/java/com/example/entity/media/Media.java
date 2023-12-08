@@ -14,6 +14,7 @@ import com.example.utils.Utils;
  * The general media class, for another media it can be done by inheriting this class
  * @author nguyenlm
  */
+//Procedural cohesion
 public class Media {
 
     private static Logger LOGGER = Utils.getLogger(Media.class.getName());
@@ -49,6 +50,7 @@ public class Media {
         return updated_quantity;
     }
 
+    //Common Coupling
     public Media getMediaById(int id) throws SQLException{
         String sql = "SELECT * FROM Media ;";
         Statement stm = AIMSDB.getConnection().createStatement();
@@ -67,6 +69,7 @@ public class Media {
         return null;
     }
 
+    //Common Coupling
     public List getAllMedia() throws SQLException{
         Statement stm = AIMSDB.getConnection().createStatement();
         ResultSet res = stm.executeQuery("select * from Media");
@@ -85,6 +88,7 @@ public class Media {
         return medium;
     }
 
+    //Stamp Coupling
     public void updateMediaFieldById(String tbname, int id, String field, Object value) throws SQLException {
         Statement stm = AIMSDB.getConnection().createStatement();
         if (value instanceof String){
@@ -95,7 +99,7 @@ public class Media {
                           + "where id=" + id + ";");
     }
 
-    // getter and setter 
+    // getter and setter
     public int getId() {
         return this.id;
     }

@@ -2,12 +2,14 @@ package com.example.entity.order;
 
 import com.example.entity.media.Media;
 
+//Procedural cohesion
 public class OrderMedia {
     
     private Media media;
     private int price;
     private int quantity;
 
+    ////Data coupling
     public OrderMedia(Media media, int quantity, int price) {
         this.media = media;
         this.quantity = quantity;
@@ -22,7 +24,7 @@ public class OrderMedia {
             ", price='" + price + "'" +
             "}";
     }
-    
+
     public Media getMedia() {
         return this.media;
     }

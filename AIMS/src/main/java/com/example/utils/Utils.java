@@ -13,18 +13,24 @@ import java.util.logging.Logger;
 /**
  * @author nguyenlm Contains helper functions
  */
+//Content Cohesion và Data Cohesion
 public class Utils {
 
+	//Data Coupling
 	public static DateFormat DATE_FORMATER = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+
+	//Data Coupling
 	private static Logger LOGGER = getLogger(Utils.class.getName());
 	static {
 		System.setProperty("java.util.logging.SimpleFormatter.format", "[%4$-4s] [%1$tF %1$tT] [%2$-7s] %5$s %n");
 	}
 
+	//Control Coupling
 	public static Logger getLogger(String className) {
 		return Logger.getLogger(className);
 	}
 
+	//Data Coupling và Control Coupling
 	public static String getCurrencyFormat(int num) {
 		Locale vietname = new Locale("vi", "VN");
 		NumberFormat defaultFormat = NumberFormat.getCurrencyInstance(vietname);
@@ -37,6 +43,7 @@ public class Utils {
 	 * @author hieudm
 	 * @return the current time as {@link String String}.
 	 */
+	//Data Coupling
 	public static String getToday() {
 		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	    Date date = new Date();
@@ -51,6 +58,7 @@ public class Utils {
 	 * @param message - plain text as {@link String String}.
 	 * @return cipher text as {@link String String}.
 	 */
+	//Data Coupling và Control Coupling
 	public static String md5(String message) {
 		String digest = null;
 		try {

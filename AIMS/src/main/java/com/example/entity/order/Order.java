@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.example.utils.Configs;
 
+// Sequential Cohesion
 public class Order {
     
     private int shippingFees;
@@ -20,10 +21,12 @@ public class Order {
         this.lstOrderMedia = lstOrderMedia;
     }
 
+    //Data coupling
     public void addOrderMedia(OrderMedia om){
         this.lstOrderMedia.add(om);
     }
 
+    //Data coupling
     public void removeOrderMedia(OrderMedia om){
         this.lstOrderMedia.remove(om);
     }
@@ -52,6 +55,7 @@ public class Order {
         this.deliveryInfo = deliveryInfo;
     }
 
+    //Data coupling
     public int getAmount(){
         double amount = 0;
         for (Object object : lstOrderMedia) {

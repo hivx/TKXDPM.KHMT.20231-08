@@ -16,8 +16,8 @@ Group information is described in the table below:
 
 | Name             | Student Id  | Role        |
 | :--------------- | :---------- | :---------- |
-| Chu Văn HIếu     | 20194046    | Team Leader |
-| Nguyễn Văn Hiển  | 20204549    | Member      |
+| Chu Văn Hiếu     | 20194046    | Team Leader |
+| Nguyễn Văn Hiển  | 20204548    | Member      |
 | Nguyễn Đức Hiệp  | 20200213    | Member      |
 | Doãn Văn Hiếu    | 20204549    | Member      |
 
@@ -34,7 +34,7 @@ Project structure is described below:
 ---
 
 <details>
-  <summary>W10: 27/11/2023 ~ 3/12/2023 </summary>
+  <summary>W10: 27/3/2023 ~ 03/12/2023 </summary>
 <br>
 <details>
 <summary>Chu Văn Hiếu</summary>
@@ -55,15 +55,75 @@ Project structure is described below:
 <br>
 
 - Assigned tasks:
-  - Task 1
-  - Task 2
-  - ...
+  - Đánh giá Coupling cho các lớp trong folder utils
 
 - Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): [#3](https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/3)
   - Specific implementation details:
-    - Describe specific in detail what you did last week
-    - You can attach images if you want
+    - Phân loại từng hàm trong folder utils và đánh giá coupling cho chúng
+
+</details>
+
+<details>
+<summary>Nguyễn Đức Hiệp</summary>
+<br>
+
+- Assigned tasks:
+  - Đánh giá Cohesion cho các lớp trong entity
+
+- Implementation details:
+  - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/2
+  - Specific implementation details:
+    - Đánh giá cohesion cho các lớp trong entity
+
+</details>
+
+<details>
+<summary>Doãn Văn Hiếu</summary>
+<br>
+
+- Assigned tasks:
+  - Đánh giá Coupling cho các lớp trong controller
+
+- Implementation details:
+  - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/1
+  - Specific implementation details:
+    - Phân loại từng hàm trong controller và đánh giá coupling cho chúng
+
+</details>
+
+</details>
+
+---
+
+<details>
+  <summary>W11: 04/12/2023 ~ 10/12/2023 </summary>
+<br>
+<details>
+<summary>Chu Văn Hiếu</summary>
+<br>
+
+- Assigned tasks:
+  - Đánh giá Coupling cho các lớp trong folder subsystem
+
+- Implementation details:
+  - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/4
+  - Specific implementation details:
+    - Đánh giá Coupling cho các hàm và lớp trong subsystem
+
+</details>
+
+<details>
+<summary>Nguyễn Văn Hiển</summary>
+<br>
+
+- Assigned tasks:
+  - Đánh giá Cohesion cho các lớp trong folder utils
+
+- Implementation details:
+  - Pull Request(s): [link pull request](https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/7)
+  - Specific implementation details:
+    - Phân loại từng hàm trong folder utils và đánh giá cohesion cho chúng
 
 </details>
 
@@ -75,7 +135,7 @@ Project structure is described below:
   - Đánh giá Coupling cho các lớp trong entity
 
 - Implementation details:
-  - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/2
+  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
   - Specific implementation details:
     - Đánh giá coupling cho các hàm trong entity
 
@@ -86,15 +146,12 @@ Project structure is described below:
 <br>
 
 - Assigned tasks:
-  - Task 1
-  - Task 2
-  - ...
+  - Đánh giá Cohesion cho các lớp trong controller
 
 - Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
+  - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/6
   - Specific implementation details:
-    - Describe specific in detail what you did last week
-    - You can attach images if you want
+    - Phân loại từng hàm trong controller và đánh giá cohesion cho chúng
 
 </details>
 

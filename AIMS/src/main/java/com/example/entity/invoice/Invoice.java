@@ -2,6 +2,7 @@ package com.example.entity.invoice;
 
 import com.example.entity.order.Order;
 
+//Sequential Cohesion
 public class Invoice {
 
     private Order order;
@@ -11,10 +12,12 @@ public class Invoice {
 
     }
 
+    //Data coupling
     public Invoice(Order order){
         this.order = order;
     }
 
+    //Data coupling
     public Order getOrder() {
         return order;
     }
