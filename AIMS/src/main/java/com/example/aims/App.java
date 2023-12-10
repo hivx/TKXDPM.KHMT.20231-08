@@ -25,7 +25,7 @@ public class App extends Application {
 		try {
 
 			// initialize the scene
-			AnchorPane root = FXMLLoader.load(App.class.getResource("home.fxml"));
+			AnchorPane root = FXMLLoader.load(App.class.getResource(Configs.HOME_PATH));
 			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);
 			primaryStage.show();

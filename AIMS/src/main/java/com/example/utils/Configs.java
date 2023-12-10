@@ -42,7 +42,7 @@ public class Configs {
 	public static float PERCENT_VAT = 10;
 
 	// static resource
-	public static final String IMAGE_PATH = "assets/images";
+	public static final String IMAGE_PATH = "src/main/resources/assets/images";
 	public static final String INVOICE_SCREEN_PATH = "invoice.fxml";
 	public static final String INVOICE_MEDIA_SCREEN_PATH = "media_invoice.fxml";
 	public static final String PAYMENT_SCREEN_PATH = "/payment.fxml";
