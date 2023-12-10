@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import com.example.entity.cart.Cart;
@@ -30,5 +31,10 @@ public class BaseController {
     // Common coupling
     public List getListCartMedia(){
         return Cart.getCart().getListMedia();
+    }
+
+    public List getAllMedia() throws SQLException {
+        var media = new Media();
+        return media.getAllMedia();
     }
 }

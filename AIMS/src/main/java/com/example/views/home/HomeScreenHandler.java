@@ -39,28 +39,28 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
     public static Logger LOGGER = Utils.getLogger(HomeScreenHandler.class.getName());
 
     @FXML
-    private Label numMediaInCart;
+    Label numMediaInCart;
 
     @FXML
-    private ImageView aimsImage;
+    public ImageView aimsImage;
 
     @FXML
-    private ImageView cartImage;
+    public ImageView cartImage;
 
     @FXML
-    private VBox vboxMedia1;
+    public VBox vboxMedia1;
 
     @FXML
-    private VBox vboxMedia2;
+    public VBox vboxMedia2;
 
     @FXML
-    private VBox vboxMedia3;
+    public VBox vboxMedia3;
 
     @FXML
-    private HBox hboxMedia;
+    public HBox hboxMedia;
 
     @FXML
-    private SplitMenuButton splitMenuBtnSearch;
+    public SplitMenuButton splitMenuBtnSearch;
 
     private List homeItems;
 
