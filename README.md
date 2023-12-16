@@ -209,7 +209,7 @@ Project structure is described below:
 <br>
 
 - Assigned tasks:
-  - Đánh giá SOLID cho các lớp trong controller
+  - Đánh giá SOLID cho class BaseController, HomeController, PaymentController trong controller
 
 - Implementation details:
   - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/11
