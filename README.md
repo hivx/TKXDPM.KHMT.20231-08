@@ -159,6 +159,69 @@ Project structure is described below:
 
 ---
 
+<details>
+  <summary>12: 11/12/2023 ~ 17/12/2023 </summary>
+<br>
+<details>
+<summary>Chu Văn Hiếu</summary>
+<br>
+
+- Assigned tasks:
+  - Đánh giá Cohesion cho các lớp trong folder subsystem
+
+- Implementation details:
+  - Pull Request(s): [Link](https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/9)
+  - Specific implementation details:
+    - Phân loại từng hàm và đánh giá cohesion trong subsystem
+
+</details>
+
+<details>
+<summary>Nguyễn Văn Hiển</summary>
+<br>
+
+- Assigned tasks:
+  - Đánh giá Cohesion cho các lớp trong folder utils
+
+- Implementation details:
+  - Pull Request(s): [link pull request](https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/7)
+  - Specific implementation details:
+    - Phân loại từng hàm trong folder utils và đánh giá cohesion cho chúng
+
+</details>
+
+<details>
+<summary>Nguyễn Đức Hiệp</summary>
+<br>
+
+- Assigned tasks:
+  - Đánh giá Cohesion cho các lớp trong entity
+
+- Implementation details:
+  - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/8
+  - Specific implementation details:
+    - Phân loại từng hàm và đánh giá cohesion trong entity
+
+</details>
+
+<details>
+<summary>Doãn Văn Hiếu</summary>
+<br>
+
+- Assigned tasks:
+  - Đánh giá SOLID cho các lớp trong controller
+
+- Implementation details:
+  - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/11
+  - Specific implementation details:
+    - Phân loại từng lớp trong controller và đánh giá SOLID cho chúng
+
+</details>
+
+</details>
+
+---
+
 ## QA
 
 If you have questions, please contact Group 8 to be answered.
