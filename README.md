@@ -178,10 +178,12 @@ Project structure is described below:
 <br>
 
 - Assigned tasks:
+  - Đánh giá SOLID cho class InterbankBounddary, InterbankSubsystemController trong subsystem/interbank
 
 - Implementation details:
-  - Pull Request(s):
+  - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/13
   - Specific implementation details:
+    - Phân loại từng class trong subsystem/interbank và đánh giá SOLID cho chúng
 
 </details>
 
@@ -205,10 +207,12 @@ Project structure is described below:
 <br>
 
 - Assigned tasks:
+  - Đánh giá SOLID cho class BaseController, HomeController, PaymentController trong controller
 
 - Implementation details:
-  - Pull Request(s):
+  - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/11
   - Specific implementation details:
+    - Phân loại từng lớp trong controller và đánh giá SOLID cho chúng
 
 </details>
 
@@ -218,19 +222,19 @@ Project structure is described below:
 
 
 <details>
-  <summary>12: 11/12/2023 ~ 17/12/2023 </summary>
+  <summary>W13: 18/12/2023 ~ 24/12/2023 </summary>
 <br>
 <details>
 <summary>Chu Văn Hiếu</summary>
 <br>
 
 - Assigned tasks:
-  - Đánh giá Cohesion cho các lớp trong folder subsystem
+  
 
 - Implementation details:
-  - Pull Request(s): [Link](https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/9)
+  - Pull Request(s): 
   - Specific implementation details:
-    - Phân loại từng hàm và đánh giá cohesion trong subsystem
+    
 
 </details>
 
@@ -239,12 +243,12 @@ Project structure is described below:
 <br>
 
 - Assigned tasks:
-  - Đánh giá Cohesion cho các lớp trong folder utils
+  
 
 - Implementation details:
-  - Pull Request(s): [link pull request](https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/7)
+  - Pull Request(s): 
   - Specific implementation details:
-    - Phân loại từng hàm trong folder utils và đánh giá cohesion cho chúng
+    
 
 </details>
 
@@ -253,12 +257,12 @@ Project structure is described below:
 <br>
 
 - Assigned tasks:
-  - Đánh giá Cohesion cho các lớp trong entity
+  
 
 - Implementation details:
-  - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/8
+  - Pull Request(s): 
   - Specific implementation details:
-    - Phân loại từng hàm và đánh giá cohesion trong entity
+    
 
 </details>
 
@@ -267,12 +271,11 @@ Project structure is described below:
 <br>
 
 - Assigned tasks:
-  - Đánh giá SOLID cho class BaseController, HomeController, PaymentController trong controller
 
 - Implementation details:
-  - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/11
+  - Pull Request(s): 
   - Specific implementation details:
-    - Phân loại từng lớp trong controller và đánh giá SOLID cho chúng
+    
 
 </details>
 
