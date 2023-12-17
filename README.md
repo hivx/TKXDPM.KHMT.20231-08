@@ -166,10 +166,12 @@ Project structure is described below:
 <br>
 
 - Assigned tasks:
+  - Đánh giá SOLID cho class InterbankInterface, InterbankSubsystem trong subsystem
 
 - Implementation details:
-  - Pull Request(s):
+  - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/14
   - Specific implementation details:
+    - Phân loại từng class trong subsystem và đánh giá SOLID cho chúng
 
 </details>
 
