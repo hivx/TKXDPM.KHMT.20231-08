@@ -158,6 +158,64 @@ Project structure is described below:
 </details>
 
 ---
+<details>
+  <summary>W12: 11/12/2023 ~ 17/12/2023 </summary>
+<br>
+<details>
+<summary>Chu Văn Hiếu</summary>
+<br>
+
+- Assigned tasks:
+
+- Implementation details:
+  - Pull Request(s):
+  - Specific implementation details:
+
+</details>
+
+<details>
+<summary>Nguyễn Văn Hiển</summary>
+<br>
+
+- Assigned tasks:
+
+- Implementation details:
+  - Pull Request(s):
+  - Specific implementation details:
+
+</details>
+
+<details>
+<summary>Nguyễn Đức Hiệp</summary>
+<br>
+
+- Assigned tasks:
+  - Tìm sự vi phạm SOLID cho class PlaceOrderController, ViewCartController trong controller
+  - Đưa ra giải pháp
+
+- Implementation details:
+  - Pull Request(s): https://github.com/hivx/TKXDPM.KHMT.20231-08/pull/12
+  - Specific implementation details:
+    - tìm sự vi phạm SOLID và đưa ra giải pháp trong controller
+
+</details>
+
+<details>
+<summary>Doãn Văn Hiếu</summary>
+<br>
+
+- Assigned tasks:
+
+- Implementation details:
+  - Pull Request(s):
+  - Specific implementation details:
+
+</details>
+
+</details>
+
+---
+
 
 <details>
   <summary>12: 11/12/2023 ~ 17/12/2023 </summary>
