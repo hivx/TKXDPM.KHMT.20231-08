@@ -3,6 +3,7 @@ package controller;
 import entity.media.Media;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,6 +20,16 @@ public class HomeController extends BaseController {
      */
     public List getAllMedia() throws SQLException {
         return new Media().getAllMedia();
+    }
+
+    /**
+     * this method gets all Media in DB where title like "title" and return back to home to display
+     *
+     * @return List[Media]
+     * @throws SQLException
+     */
+    public List getMediaByTitle(String title) throws SQLException {
+        return new Media().getMediaByTitle(title);
     }
 
 }
