@@ -7,13 +7,17 @@ import entity.cart.Cart;
 import entity.media.Media;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.Pagination;
 import javafx.scene.control.SplitMenuButton;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
@@ -46,6 +50,9 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
     private ImageView cartImage;
 
     @FXML
+    private TextField txtSearch;
+
+    @FXML
     private VBox vboxMedia1;
 
     @FXML
@@ -55,7 +62,16 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
     private VBox vboxMedia3;
 
     @FXML
+    private VBox vboxMedia4;
+
+    @FXML
     private HBox hboxMedia;
+
+    @FXML
+    private HBox header;
+
+    @FXML
+    private Pagination paging;
 
     @FXML
     private SplitMenuButton splitMenuBtnSearch;
@@ -92,6 +108,7 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
      */
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
+        header.setHgrow(paging, Priority.ALWAYS);
         setBController(new HomeController());
         try {
             List medium = getBController().getAllMedia();
@@ -122,10 +139,75 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
                 throw new ViewCartException(Arrays.toString(e1.getStackTrace()).replaceAll(", ", "\n"));
             }
         });
-        addMediaHome(this.homeItems);
+
+        splitMenuBtnSearch.setOnMouseClicked(e -> {
+            hboxMedia.getChildren().forEach(node -> {
+                VBox vBox = (VBox) node;
+                vBox.getChildren().clear();
+            });
+            String searchText = txtSearch.getText().trim();
+            if (!searchText.isEmpty()) {
+                try {
+                    searchByTitle(searchText);
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            } else {
+                addMediaHome(homeItems);
+                setupPagination(homeItems);
+            }
+        });
+        setupPagination(homeItems);
+
         addMenuItem(0, "Book", splitMenuBtnSearch);
         addMenuItem(1, "DVD", splitMenuBtnSearch);
         addMenuItem(2, "CD", splitMenuBtnSearch);
+    }
+
+    /**
+     * @param title
+     * @throws IOException
+     */
+    private void searchByTitle(String title) throws IOException {
+        try {
+            List searchResults = getBController().getMediaByTitle(title);
+
+            //ArrayList modifiedSearchResulst = new ArrayList(searchResults);
+
+            List<MediaHandler> Resulst = new ArrayList<MediaHandler>();
+            for (Object object : searchResults) {
+                Media media = (Media) object;
+                MediaHandler m1 = new MediaHandler(Configs.HOME_MEDIA_PATH, media, this);
+                Resulst.add(m1);
+            }
+
+            addMediaHome(Resulst);
+
+            setupPagination(Resulst);
+        } catch (SQLException e) {
+            LOGGER.info("Error occurred during search: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+
+    private void setupPagination(List items) {
+        int itemsPerPage = 12;
+        int numPages = (int) Math.ceil((double) items.size() / itemsPerPage);
+        paging.setPageCount(numPages);
+        paging.setPageFactory((Integer pageIndex) -> createPage(pageIndex, items));
+    }
+
+    private VBox createPage(int pageIndex, List items) {
+        VBox pageBox = new VBox();
+
+        int itemsPerPage = 12;
+        int startIndex = pageIndex * itemsPerPage;
+        int endIndex = Math.min(startIndex + itemsPerPage, items.size());
+
+        addMediaHome(items.subList(startIndex, endIndex));
+
+        return pageBox;
     }
 
     public void setImage() {
@@ -143,24 +225,46 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
      * @param items
      */
     public void addMediaHome(List items) {
-        ArrayList mediaItems = (ArrayList) ((ArrayList) items).clone();
-        hboxMedia.getChildren().forEach(node -> {
-            VBox vBox = (VBox) node;
-            vBox.getChildren().clear();
-        });
+        // Reset the content of the hboxMedia
+        vboxMedia1.getChildren().clear();
+        vboxMedia2.getChildren().clear();
+        vboxMedia3.getChildren().clear();
+        vboxMedia4.getChildren().clear();
+
+        // Add media items to the hboxMedia
+        ArrayList mediaItems = new ArrayList(items);
         while (!mediaItems.isEmpty()) {
-            hboxMedia.getChildren().forEach(node -> {
-                int vid = hboxMedia.getChildren().indexOf(node);
-                VBox vBox = (VBox) node;
-                while (vBox.getChildren().size() < 3 && !mediaItems.isEmpty()) {
+            for (int j = 0; j < 3 && !mediaItems.isEmpty(); j++) {
+                if (!mediaItems.isEmpty()) {
                     MediaHandler media = (MediaHandler) mediaItems.get(0);
-                    vBox.getChildren().add(media.getContent());
+                    vboxMedia1.getChildren().add(media.getContent());
                     mediaItems.remove(media);
                 }
-            });
-            return;
+            }
+            for (int j = 0; j < 3 && !mediaItems.isEmpty(); j++) {
+                if (!mediaItems.isEmpty()) {
+                    MediaHandler media = (MediaHandler) mediaItems.get(0);
+                    vboxMedia2.getChildren().add(media.getContent());
+                    mediaItems.remove(media);
+                }
+            }
+            for (int j = 0; j < 3 && !mediaItems.isEmpty(); j++) {
+                if (!mediaItems.isEmpty()) {
+                    MediaHandler media = (MediaHandler) mediaItems.get(0);
+                    vboxMedia3.getChildren().add(media.getContent());
+                    mediaItems.remove(media);
+                }
+            }
+            for (int j = 0; j < 3 && !mediaItems.isEmpty(); j++) {
+                if (!mediaItems.isEmpty()) {
+                    MediaHandler media = (MediaHandler) mediaItems.get(0);
+                    vboxMedia4.getChildren().add(media.getContent());
+                    mediaItems.remove(media);
+                }
+            }
         }
     }
+
 
     /**
      * @param position
@@ -195,5 +299,4 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
         });
         menuButton.getItems().add(position, menuItem);
     }
-
 }
