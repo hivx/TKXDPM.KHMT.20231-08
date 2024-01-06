@@ -162,7 +162,7 @@ public class CartScreenHandler extends BaseScreenHandler {
     void updateCartAmount() {
         // calculate subtotal and amount
         int subtotal = getBController().getCartSubtotal();
-        int vat = (int) ((Configs.PERCENT_VAT / 100) * subtotal);
+        int vat = (int) ((Configs.PERCENT_VAT/100) * subtotal);
         int amount = subtotal + vat;
 
 
