@@ -55,12 +55,13 @@ public class ShippingScreenHandler extends BaseScreenHandler implements Initiali
     @FXML
     private ComboBox<String> province;
 
-
-
     private Order order;
 
-        @FXML
+    @FXML
     private ImageView aimsImage;
+
+    @FXML
+    private TextField weightTextField;
 
     public ShippingScreenHandler(Stage stage, String screenPath, Order order) throws IOException {
         super(stage, screenPath);
@@ -128,9 +129,12 @@ public class ShippingScreenHandler extends BaseScreenHandler implements Initiali
             throw new InvalidDeliveryInfoException(e.getMessage());
         }
 
+        // Lấy giá trị weight từ TextField
+//        int weight = Integer.parseInt(weightTextField.getText());
 
-
-
+        // calculate shipping fees
+        int shippingFees = getBController().calculateShippingFee(order.getAmount());
+        order.setShippingFees(shippingFees);
         order.setName(name.getText());
         order.setPhone(phone.getText());
         order.setProvince(province.getValue());

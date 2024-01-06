@@ -178,11 +178,29 @@ public class CartScreenHandler extends BaseScreenHandler {
         displayCartWithMediaAvailability();
     }
 
-    void updateCartAmount() {
+//    void updateCartAmount() {
+//
+//        // calculate subtotal and amount
+//        int subtotal = getBController().getCartSubtotal();
+//        int vat = (int) ((Configs.PERCENT_VAT/100) * subtotal);
+//        List lstMedia = getBController().getListCartMedia();
+//        for (Object cm : lstMedia) {
+//            CartMedia cartMedia = (CartMedia) cm;
+//            if (cartMedia.isSelected()) {
+//                subtotal += cartMedia.getQuantity() * cartMedia.getPrice();
+//            }
+//        }
+//
+//
+//        int amount = subtotal + vat;
+//
+//        labelSubtotal.setText(Utils.getCurrencyFormat(subtotal));
+//        labelVAT.setText(Utils.getCurrencyFormat(vat));
+//        labelAmount.setText(Utils.getCurrencyFormat(amount));
+//    }
 
-        // calculate subtotal and amount
-        int subtotal = getBController().getCartSubtotal();
-        int vat = (int) ((Configs.PERCENT_VAT/100) * subtotal);
+    void updateCartAmount() {
+        int subtotal = 0;
         List lstMedia = getBController().getListCartMedia();
         for (Object cm : lstMedia) {
             CartMedia cartMedia = (CartMedia) cm;
@@ -191,7 +209,7 @@ public class CartScreenHandler extends BaseScreenHandler {
             }
         }
 
-
+        int vat = (int) ((Configs.PERCENT_VAT / 100) * subtotal);
         int amount = subtotal + vat;
 
         labelSubtotal.setText(Utils.getCurrencyFormat(subtotal));

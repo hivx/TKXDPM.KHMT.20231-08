@@ -74,35 +74,35 @@ public class DeliveryMethodsScreenHandler extends BaseScreenHandler {
         shipment.setDeliveryTime(deliveryDateString);
         shipment.setDeliveryInstruction(deliveryInstructionString);
 
-        // Lấy giá trị weight từ TextField
-        int weight = Integer.parseInt(weightTextField.getText());
+//        // Lấy giá trị weight từ TextField
+//        int weight = Integer.parseInt(weightTextField.getText());
+//
+//        var placeOrderController = new PlaceOrderController();
+//        int cartSize = placeOrderController.getListCartMedia().size();
+//        String ship = new String(order.getProvince());
 
-        var placeOrderController = new PlaceOrderController();
-        int cartSize = placeOrderController.getListCartMedia().size();
-        String ship = new String(order.getProvince());
-
-        // Tính phí vận chuyển
-        int shippingFees = getBController().calculateShippingFee(order.getAmount(), weight);
-        if (order.getAmount() >= 100) {
-            shippingFees = 0;
-        } else if (ship.equals("Hà Nội") || ship.equals("Hồ Chí Minh")) {
-            if (weight <= 3) {
-                shippingFees = 22;
-            } else {
-                // Số lượng 0.5 kg tiếp theo sau 3 kg đầu
-                int additionalWeight = (weight * 2) - 6; // Trừ đi 6 vì đã tính 3 kg đầu
-                // Phí cho trọng lượng thêm theo quy tắc 2500 cho mỗi 0.5 kg
-                int additionalFee = additionalWeight * 2;
-
-                // Tổng phí
-                shippingFees = 22 + additionalFee;
-            }
-
-            if (ship.equals("Hà Nội")) {
-                shippingFees += cartSize * 10;
-            }
-        }
-        order.setShippingFees(shippingFees);
+//         // Tính phí vận chuyển
+//        int shippingFees = getBController().calculateShippingFee(order.getAmount(), weight);
+//        if (order.getAmount() >= 100) {
+//            shippingFees = 0;
+//        } else if (ship.equals("Hà Nội") || ship.equals("Hồ Chí Minh")) {
+//            if (weight <= 3) {
+//                shippingFees = 22;
+//            } else {
+//                // Số lượng 0.5 kg tiếp theo sau 3 kg đầu
+//                int additionalWeight = (weight * 2) - 6; // Trừ đi 6 vì đã tính 3 kg đầu
+//                // Phí cho trọng lượng thêm theo quy tắc 2500 cho mỗi 0.5 kg
+//                int additionalFee = additionalWeight * 2;
+//
+//                // Tổng phí
+//                shippingFees = 22 + additionalFee;
+//            }
+//
+//            if (ship.equals("Hà Nội")) {
+//                shippingFees += cartSize * 10;
+//            }
+//        }
+//        order.setShippingFees(shippingFees);
 
 
         PlaceRushOrderController.validatePlaceRushOrderData(shipment);
