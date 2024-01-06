@@ -55,6 +55,8 @@ public class ShippingScreenHandler extends BaseScreenHandler implements Initiali
     @FXML
     private ComboBox<String> province;
 
+
+
     private Order order;
 
         @FXML
@@ -126,9 +128,9 @@ public class ShippingScreenHandler extends BaseScreenHandler implements Initiali
             throw new InvalidDeliveryInfoException(e.getMessage());
         }
 
-        // calculate shipping fees
-        int shippingFees = getBController().calculateShippingFee(order.getAmount());
-        order.setShippingFees(shippingFees);
+
+
+
         order.setName(name.getText());
         order.setPhone(phone.getText());
         order.setProvince(province.getValue());

@@ -6,11 +6,11 @@ import entity.invoice.Invoice;
 import entity.media.Media;
 import entity.order.Order;
 import entity.order.OrderMedia;
+import utils.Utils;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.HashMap;
-import java.util.Random;
 import java.util.logging.Logger;
 
 public class PlaceOrderController extends BaseController {
@@ -18,7 +18,7 @@ public class PlaceOrderController extends BaseController {
     /**
      * Just for logging purpose
      */
-    private static Logger LOGGER = utils.Utils.getLogger(PlaceOrderController.class.getName());
+    private static Logger LOGGER = Utils.getLogger(PlaceOrderController.class.getName());
 
     /**
      * This method checks the avalibility of product when user click PlaceOrder
@@ -119,17 +119,29 @@ public class PlaceOrderController extends BaseController {
         return true;
     }
 
-
     /**
      * This method calculates the shipping fees of order
      *
      * @param order
+     * @param weight
+     * @param cartSize
      * @return shippingFee
      */
-    public int calculateShippingFee(int amount) {
-        Random rand = new Random();
-        int fees = (int) (((rand.nextFloat() * 10) / 100) * amount);
-        return fees;
+    public int calculateShippingFee(int amount, int weight) {
+        if (amount >= 100) {
+            return 0; // Nếu amount lớn hơn 100000, phí vận chuyển là 0.
+        } else {
+            // Giá cho 0.5 kg đầu là 30000
+            int baseFee = 30;
+            // Số lượng 0.5 kg tiếp theo
+            int additionalWeight = (weight * 2) - 1; // Trừ đi 1 vì đã tính 0.5 kg đầu
+            // Phí cho trọng lượng thêm theo quy tắc 2500 cho mỗi 0.5 kg
+            int additionalFee = additionalWeight * 2;
+
+            // Tổng phí
+            int fees = baseFee + additionalFee;
+            return fees;
+        }
     }
 
     /**

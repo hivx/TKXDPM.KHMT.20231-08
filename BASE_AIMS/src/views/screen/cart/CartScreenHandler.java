@@ -179,7 +179,10 @@ public class CartScreenHandler extends BaseScreenHandler {
     }
 
     void updateCartAmount() {
-        int subtotal = 0;
+
+        // calculate subtotal and amount
+        int subtotal = getBController().getCartSubtotal();
+        int vat = (int) ((Configs.PERCENT_VAT/100) * subtotal);
         List lstMedia = getBController().getListCartMedia();
         for (Object cm : lstMedia) {
             CartMedia cartMedia = (CartMedia) cm;
@@ -188,7 +191,7 @@ public class CartScreenHandler extends BaseScreenHandler {
             }
         }
 
-        int vat = (int) ((Configs.PERCENT_VAT / 100) * subtotal);
+
         int amount = subtotal + vat;
 
         labelSubtotal.setText(Utils.getCurrencyFormat(subtotal));

@@ -36,7 +36,7 @@
                     </image>
                 </ImageView>
                 <Text layoutX="112.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0"
-                      text="AIMS DELIVERY METHOD FORM">
+                      text="DELIVERY METHOD FORM">
                     <font>
                         <Font name="System Bold" size="24.0"/>
                     </font>
@@ -93,6 +93,24 @@
                 <AnchorPane layoutX="527.0" layoutY="64.0" prefHeight="269.0" prefWidth="560.0"
                             style="-fx-border-color: #ebebeb; -fx-background-color: white;">
                     <children>
+                        <AnchorPane layoutX="3.0" layoutY="192.0" prefHeight="64.0" prefWidth="815.0" AnchorPane.leftAnchor="2.0">
+                            <children>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="23.0" prefHeight="20.0"
+                                       prefWidth="22.0" text="*" textAlignment="CENTER" textFill="#eb0d0d">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Text layoutX="67.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                                      text="Weight" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="29.1015625">
+                                    <font>
+                                        <Font name="System Italic" size="24.0"/>
+                                    </font>
+                                </Text>
+                                <TextField fx:id="weightTextField" layoutX="281.0" layoutY="30.0" prefHeight="32.0"
+                                           prefWidth="356.0" AnchorPane.leftAnchor="330.0"/>
+                            </children>
+                        </AnchorPane>
                         <AnchorPane layoutX="3.0" layoutY="3.0" prefHeight="64.0" prefWidth="817.0"
                                     AnchorPane.bottomAnchor="487.0" AnchorPane.leftAnchor="2.0"
                                     AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="2.0">
@@ -144,7 +162,7 @@
                             </children>
                         </AnchorPane>
                         <Label fx:id="errorProvince" layoutX="115.0" layoutY="305.0"
-                               text="Your localtion isnot in Ha Noi, please chosse Ha Noi to use Place Rush Order function"
+                               text="If your location is in Ha Noi, please choose use Place Rush Order function"
                                textFill="#d10808">
                             <font>
                                 <Font size="18.0"/>
