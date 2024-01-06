@@ -14,7 +14,6 @@ public class OrderMedia {
         this.price = price;
     }
 
-
     /**
      * @return String
      */

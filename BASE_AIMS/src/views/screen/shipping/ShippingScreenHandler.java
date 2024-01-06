@@ -1,7 +1,10 @@
 package views.screen.shipping;
 
 import common.exception.InvalidDeliveryInfoException;
+import common.exception.ViewCartException;
 import controller.PlaceOrderController;
+import controller.ViewCartController;
+import entity.cart.CartMedia;
 import entity.invoice.Invoice;
 import entity.order.Order;
 import javafx.beans.property.BooleanProperty;
@@ -11,18 +14,26 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import utils.Configs;
 import views.screen.BaseScreenHandler;
+import views.screen.cart.CartScreenHandler;
+import views.screen.cart.MediaHandler;
 import views.screen.invoice.InvoiceScreenHandler;
 import views.screen.popup.PopupScreen;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.logging.Logger;
 
 public class ShippingScreenHandler extends BaseScreenHandler implements Initializable {
 
@@ -46,9 +57,16 @@ public class ShippingScreenHandler extends BaseScreenHandler implements Initiali
 
     private Order order;
 
+        @FXML
+    private ImageView aimsImage;
+
     public ShippingScreenHandler(Stage stage, String screenPath, Order order) throws IOException {
         super(stage, screenPath);
         this.order = order;
+
+        File file = new File("assets/images/Logo.png");
+        Image im = new Image(file.toURI().toString());
+        aimsImage.setImage(im);
     }
 
     /**
@@ -134,6 +152,20 @@ public class ShippingScreenHandler extends BaseScreenHandler implements Initiali
         DeliveryMethodsScreenHandler.setScreenTitle("Delivery method screen");
         DeliveryMethodsScreenHandler.setBController(getBController());
         DeliveryMethodsScreenHandler.show();
+    }
+
+    @FXML
+    private void handleBack(MouseEvent event) throws IOException {
+        // Back to previous screen
+        CartScreenHandler cartScreen;
+        try {
+            cartScreen = new CartScreenHandler(this.stage, Configs.CART_SCREEN_PATH);
+            cartScreen.setHomeScreenHandler(homeScreenHandler);
+            cartScreen.setBController(new ViewCartController());
+            cartScreen.requestToViewCart(this);
+        } catch (IOException | SQLException e1) {
+            throw new ViewCartException(Arrays.toString(e1.getStackTrace()).replaceAll(", ", "\n"));
+        }
     }
 
     /**
