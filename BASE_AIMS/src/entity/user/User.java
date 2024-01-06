@@ -151,6 +151,7 @@ public class User {
             user.setAddress(res.getString("address"));
             user.setPhone(res.getString("phone"));
             user.setAdmin(res.getInt("isadmin") == 1);
+            user.setPassword(res.getString("password"));
             users.add(user);
         }
         return users;

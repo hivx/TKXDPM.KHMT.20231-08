@@ -64,6 +64,7 @@ public class UserFormScreenHandler extends BaseScreenHandler implements Initiali
         email.setText(user.getEmail());
         address.setText(user.getAddress());
         phone.setText(user.getPhone());
+        password.setText(user.getPassword());
         isAdmin.setSelected(user.isAdmin());
     }
 
