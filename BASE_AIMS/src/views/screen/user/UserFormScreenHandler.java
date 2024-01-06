@@ -39,8 +39,8 @@ public class UserFormScreenHandler extends BaseScreenHandler implements Initiali
     @FXML
     TextField password;
 
-    @FXML
-    RadioButton isAdmin;
+//    @FXML
+//    RadioButton isAdmin;
 
     private boolean isEditUser;
     private User currentUser;
@@ -65,7 +65,7 @@ public class UserFormScreenHandler extends BaseScreenHandler implements Initiali
         address.setText(user.getAddress());
         phone.setText(user.getPhone());
         password.setText(user.getPassword());
-        isAdmin.setSelected(user.isAdmin());
+//        isAdmin.setSelected(user.isAdmin());
     }
 
     @Override
@@ -78,7 +78,7 @@ public class UserFormScreenHandler extends BaseScreenHandler implements Initiali
             try {
                 var errorMsg = validateUserInfo();
                 if (errorMsg.isEmpty()) {
-                    var user = new User(0, userName.getText(), email.getText(), address.getText(), phone.getText(), password.getText(), isAdmin.isSelected());
+                    var user = new User(0, userName.getText(), email.getText(), address.getText(), phone.getText(), password.getText(), false);
                     if (isEditUser) {
                         user.setId(currentUser.getId());
                         user.editUser();

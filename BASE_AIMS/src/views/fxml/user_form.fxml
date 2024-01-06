@@ -46,10 +46,10 @@
                 <Text text="Password" wrappingWidth="120" style="-fx-font-size: 18"/>
                 <TextField fx:id="password" style="-fx-font-size: 18" prefWidth="600" prefHeight="40"/>
             </HBox>
-            <HBox spacing="4" style="-fx-padding: 0 0 0 120">
-                <RadioButton fx:id="isAdmin"/>
-                <Text text="Admin" />
-            </HBox>
+<!--            <HBox spacing="4" style="-fx-padding: 0 0 0 120">-->
+<!--                <RadioButton fx:id="isAdmin"/>-->
+<!--                <Text text="Admin" />-->
+<!--            </HBox>-->
             <HBox style="-fx-padding: 0 0 0 220" spacing="10">
                 <Button fx:id="addNewUser" style="-fx-font-size: 18" prefWidth="200" prefHeight="32"/>
                 <Button fx:id="backToUserScreen" text="Cancel" style="-fx-font-size: 18" prefWidth="200" prefHeight="32"/>
