@@ -36,8 +36,10 @@ public class UserScreenHandler extends BaseScreenHandler implements Initializabl
             userCards = new ArrayList();
             for (Object object : users) {
                 var user = (User) object;
-                var userCard = new UserCardHandler(stage, Configs.USER_CARD, user);
-                userCards.add(userCard);
+                if (!user.isAdmin()) {
+                    var userCard = new UserCardHandler(stage, Configs.USER_CARD, user);
+                    userCards.add(userCard);
+                }
             }
         } catch (SQLException ex) {
             ex.printStackTrace();
