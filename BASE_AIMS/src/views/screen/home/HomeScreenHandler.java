@@ -77,6 +77,7 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
     private SplitMenuButton splitMenuBtnSearch;
 
     private List homeItems;
+    private List types;
 
     public HomeScreenHandler(Stage stage, String screenPath) throws IOException {
         super(stage, screenPath);
@@ -112,12 +113,21 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
         setBController(new HomeController());
         try {
             List medium = getBController().getAllMedia();
+            List types = getBController().getAllType();
             this.homeItems = new ArrayList<>();
+            this.types = new ArrayList<>();
             for (Object object : medium) {
                 Media media = (Media) object;
                 MediaHandler m1 = new MediaHandler(Configs.HOME_MEDIA_PATH, media, this);
                 this.homeItems.add(m1);
             }
+            for (Object object : types) {
+                if (object instanceof String) {
+                    String type = (String) object;
+                    this.types.add(type);
+                }
+            }
+
         } catch (SQLException | IOException e) {
             LOGGER.info("Errors occured: " + e.getMessage());
             e.printStackTrace();
@@ -159,9 +169,9 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
         });
         setupPagination(homeItems);
 
-        addMenuItem(0, "Book", splitMenuBtnSearch);
-        addMenuItem(1, "DVD", splitMenuBtnSearch);
-        addMenuItem(2, "CD", splitMenuBtnSearch);
+        for (Object type : this.types) {
+            addMenuItem(0, (String) type, splitMenuBtnSearch);
+        }
     }
 
     /**
