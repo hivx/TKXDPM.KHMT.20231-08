@@ -116,6 +116,18 @@ public class Media {
         return medium;
     }
 
+    public List<String> getAllType() throws SQLException {
+        Statement stm = AIMSDB.getConnection().createStatement();
+        ResultSet res = stm.executeQuery("select distinct type from Media");
+        ArrayList<String> types = new ArrayList<>();
+        while (res.next()) {
+            String type = res.getString("type");
+            types.add(type);
+        }
+        return types;
+    }
+
+
     /**
      * @param title
      * @return List Media

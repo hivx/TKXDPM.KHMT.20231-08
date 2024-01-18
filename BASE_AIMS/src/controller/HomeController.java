@@ -22,6 +22,10 @@ public class HomeController extends BaseController {
         return new Media().getAllMedia();
     }
 
+    public List getAllType() throws SQLException {
+        return new Media().getAllType();
+    }
+
     /**
      * this method gets all Media in DB where title like "title" and return back to home to display
      *
